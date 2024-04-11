@@ -1,1 +1,14 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --color-black: #000000;
+  --color-green: #00CC14;
+  --color-white: #FFFFFF;
+
+  --page-font-family-Inter: 'Inter', sans-serif;
+  --page-font-weight-Inter-regular: 465;
+  --page-font-weight-Inter-extra-bold: 785;
+  --page-font-family-PressStart2P: 'PressStart2P', sans-serif;
+  --page-font-weight-PressStart2P-regular: 400;
+  --page-text-color: var(--color-green, #00CC14);
+  --page-line-height: 117%;
+}
