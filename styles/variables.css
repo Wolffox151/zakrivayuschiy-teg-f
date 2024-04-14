@@ -9,6 +9,9 @@
   --page-font-weight-Inter-extra-bold: 785;
   --page-font-family-PressStart2P: 'PressStart2P', sans-serif;
   --page-font-weight-PressStart2P-regular: 400;
+  --page-accent-color: var(--color-green, #00CC14);
   --page-text-color: var(--color-green, #00CC14);
+  --page-background-color: var(--color-black, #000000);
+  --page-background-image: repeating-linear-gradient(90deg,#000 0 2px, transparent 2px 4px), repeating-linear-gradient(180deg,#000 0 2px, transparent 2px 4px), linear-gradient(180deg, #007f0c, #004306);
   --page-line-height: 117%;
 }
