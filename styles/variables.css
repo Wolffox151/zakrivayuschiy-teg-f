@@ -14,4 +14,9 @@
   --page-background-color: var(--color-black, #000000);
   --page-background-image: repeating-linear-gradient(90deg,#000 0 2px, transparent 2px 4px), repeating-linear-gradient(180deg,#000 0 2px, transparent 2px 4px), linear-gradient(180deg, #007f0c, #004306);
   --page-line-height: 117%;
+
+  --page-like-icon-contour: var(--color-green, #00CC14);
+  --page-like-icon-main-body: var(--color-black, #000000);
+  --page-like-icon-core: var(--color-black, #000000);
+  --page-like-icon-sparks: var(--color-black, #000000);
 }
