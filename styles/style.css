@@ -163,34 +163,35 @@
 }
 
 .card__footer {
-  padding-block-end: 25px;
+  display: flex;
+  justify-content: end;
+  padding-block: 25px;
   padding-inline: 25px;
 }
 
-.card__foter_like_button {
+.like-icon {
+  inline-size: 39px;
+}
+
+.main-body, .core, .sparks {
+  fill: none;
+}
+
+.card__like-button {
   padding-block: 11px;
   padding-inline: 35px;
+  block-size: 38px;
   background-color: transparent;
   border: 2px solid var(--page-accent-color, #00CC14);
-}
-
-.card__footer {
-  padding-block-start: 25px;
-  display: flex;
-  justify-content: end;
-  gap: 12px;
-}
-
-.card__foter_like-icon_button {
-  border: none;
-  background-color: transparent;
-}
-
-.card__foter_like_button {
+  font-family: var(--page-font-family-PressStart2P, 'PressStart2P', sans-serif);
   font-size: 14px;
   line-height: 90%;
-  font-family: var(--page-font-family-PressStart2P, 'PressStart2P', sans-serif);
   text-align: center;
+}
+
+.card__footer_like-icon_button {
+  border: none;
+  background-color: transparent;
 }
 
 .button_save-to-the-memory {
