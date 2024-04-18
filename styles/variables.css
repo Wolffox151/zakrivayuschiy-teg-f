@@ -7,7 +7,7 @@
   --page-font-family-Inter: 'Inter', sans-serif;
   --page-font-weight-Inter-regular: 465;
   --page-font-weight-Inter-extra-bold: 785;
-  --page-font-family-PressStart2P: 'PressStart2P', sans-serif;
+  --page-font-family-PressStart2P: 'PressStart2P', fantasy;
   --page-font-weight-PressStart2P-regular: 400;
   --page-accent-color: var(--color-green, #00CC14);
   --page-button-before-color: var(--color-green, #00CC14);

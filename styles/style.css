@@ -35,7 +35,7 @@
   justify-items: center;
   border: 2px solid var(--page-accent-color, #00CC14);
   padding-inline: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
-  padding-block: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 25px;
+  padding-block: clamp(7.1875rem, 6.8574rem + 1.4085vw, 8.125rem) 25px;
   font-family: var(--page-font-family-PressStart2P, 'PressStart2P', sans-serif);
   font-weight: var(--page-font-weight-PressStart2P-regular, 400);
   line-height: normal;
@@ -71,6 +71,7 @@
   background: none;
   cursor: pointer;
   appearance: none;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover {
@@ -167,6 +168,7 @@
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
+  block-size: 100%;
   aspect-ratio: 1 /1;
 }
 
@@ -174,7 +176,7 @@
   display: grid;
   gap: 27px;
   padding-inline: 25px;
-  padding-block-start: 25px;
+  padding-block-start: clamp(1.25rem, 1.14rem + 0.4695vw, 1.5625rem);
   border-block-start: 2px solid var(--page-accent-color, #00CC14);
   font-size: 18px;
   line-height: 117%;
@@ -182,9 +184,10 @@
 
 .card__footer {
   display: flex;
+  gap: 4px;
   justify-content: end;
   padding-inline: 25px;
-  padding-block: 25px;
+  padding-block: 24.5px;
 }
 
 .like-icon {
@@ -207,6 +210,7 @@
   text-align: center;
   background-color: var(--page-background-color, #000000);
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__like-button:focus {
@@ -215,29 +219,12 @@
 
 .card__like-button:focus-visible {
   outline: 0;
-  box-shadow: 2px 2px 0 0 var(--page-accent-color, #00CC14);
-}
-
-.card__like-button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background-color: var(--page-button-before-color, #00CC14);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-  inline-size: 100%;
-  block-size: 100%;
-  mix-blend-mode: difference;
-}
-
-.card__like-button:hover::before {
-  transform: scaleX(1);
+  box-shadow: 2px 2px var(--page-accent-color, #00CC14);
 }
 
 .card__icon-button {
   display: flex;
+  justify-content: center;
   padding: 0;
   border: 2px solid transparent;
   background-color: transparent;
@@ -260,13 +247,14 @@
   gap: 5px;
   border: 2px solid var(--page-accent-color, #00CC14);
   padding-inline: 20px;
-  padding-block: 15px;
+  padding-block: 16px;
   font-family: var(--page-font-family-PressStart2P, 'PressStart2P', sans-serif);
   font-size: 14px;
   background-color: var(--page-background-color, #000000);
+  transition: box-shadow 0.3s ease;
 }
 
-.button_save-to-the-memory::before {
+.button::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -280,31 +268,31 @@
   mix-blend-mode: difference;
 }
 
-.button_save-to-the-memory:hover::before {
+.button:hover {
+  cursor: pointer;
+}
+
+.button:hover::before {
   transform: scaleX(1);
 }
 
-.button_save-to-the-memory:focus {
+.button:focus {
   outline: none;
+}
+
+.button:focus-visible {
+  outline: 0;
 }
 
 .button_save-to-the-memory:focus-visible {
   outline: 0;
   border-color: 2px solid var(--page-accent-color, #00CC14);
-  box-shadow: 2px 2px 0 0 var(--page-accent-color, #00CC14);
+  box-shadow: 2px 2px var(--page-accent-color, #00CC14);
 }
 
-.icon__save-to-the-memory {
-  inline-size: 28px;
-  block-size: 28px;
-}
-
-.modal[opened] {
+.modal[open] {
   display: grid;
   grid-template-rows: repeat(2, min-content);
-}
-
-.modal {
   border: 2px solid var(--page-accent-color, #00CC14);
   background-color: var(--page-background-color, #00CC14);
   padding: 30px;
@@ -316,7 +304,7 @@
 
 .modal::backdrop {
   opacity: 0.7;
-  background-color: var(--page-background-color, #000000);
+  background-color: var(--color-black, #000000);
 }
 
 .modal__icon {
@@ -346,22 +334,13 @@
   appearance: none;
 }
 
-.button_insert_floppy::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background-color: var(--page-button-before-color, #00CC14);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-  inline-size: 100%;
-  block-size: 100%;
-  mix-blend-mode: difference;
+.button_insert_floppy:focus {
+  outline: none;
 }
 
-.button_insert_floppy:hover::before {
-  transform: scaleX(1);
+.button_insert_floppy:focus-visible {
+  outline: 0;
+  box-shadow: 2px 2px var(--page-accent-color);
 }
 
 .icon__save-to-the-memory {
@@ -370,6 +349,10 @@
 }
 
 @media (width >= 1440px) {
+  .card__content {
+    padding-inline: 24px;
+  }
+
   .button_save-to-the-memory {
     flex-direction: row;
   }
