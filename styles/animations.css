@@ -30,6 +30,7 @@
 .like-icon .sparks {
   fill: var(--page-like-icon-sparks, transparent);
 }
+
 /* Hover effect*/
 .like-icon:hover {
   cursor: pointer;
@@ -77,6 +78,38 @@
   --page-like-icon-main-body: #FF0000;
   fill: var(--page-like-icon-main-body, #FF0000);
   transition: fill 0.3s linear 0.05s;
+}
+
+:root.theme-dark {
+  .like-icon:hover .core {
+    --page-like-icon-core: #00CC14;
+  }
+
+  .like-icon:hover .main-body {
+    --page-like-icon-main-body: #00CC14;
+  }
+
+  /* Active */
+  .like-icon:active .core {
+    --page-like-icon-core: #FF0000;
+  }
+
+  .like-icon:active .main-body {
+    --page-like-icon-main-body: #FF0000;
+  }
+
+  /* After click */
+  .like-icon.is-liked .contour {
+    --page-like-icon-contour: #FF0000;
+  }
+
+  .like-icon.is-liked .core {
+    --page-like-icon-core: #FF0000;
+  }
+
+  .like-icon.is-liked .main-body {
+    --page-like-icon-main-body: #FF0000;
+  }
 }
 
 @media (prefers-color-scheme: light) {
